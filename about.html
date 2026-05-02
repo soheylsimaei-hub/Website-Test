@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About the Veterinary Longevity Project — our story, mission, research areas, and the team behind the science of animal aging.">
+  <title>About — Veterinary Longevity Project</title>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5' fill='none' stroke='%2314b8a6' stroke-width='5'/><text y='65' x='50' text-anchor='middle' font-size='42' fill='%2314b8a6'>VL</text></svg>">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo" aria-label="Veterinary Longevity Project home">
+        <svg class="nav__logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" fill="none" stroke="#14b8a6" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M11 11.5 C12.5 13 14.5 15 16 16 C17.5 17 19.5 19 21 20.5" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <path d="M21 11.5 C19.5 13 17.5 15 16 16 C14.5 17 12.5 19 11 20.5" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <circle cx="16" cy="16" r="1.5" fill="#14b8a6"/>
+        </svg>
+        <span>Vet Longevity</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link" data-page="home">Home</a></li>
+        <li><a href="about.html" class="nav__link active" data-page="about" aria-current="page">About</a></li>
+        <li><a href="contact.html" class="nav__link" data-page="contact">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn--primary nav__cta">Get Involved</a>
+
+      <button class="nav__hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="index.html" class="nav__mobile-link">Home</a></li>
+        <li><a href="about.html" class="nav__mobile-link">About</a></li>
+        <li><a href="contact.html" class="nav__mobile-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary">Get Involved</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="eyebrow animate-on-scroll">Who We Are</p>
+        <h1 id="about-heading" class="heading-display animate-on-scroll delay-1 text-balance">
+          About the Project
+        </h1>
+        <p class="page-hero__sub animate-on-scroll delay-2">
+          A multidisciplinary initiative at the intersection of veterinary medicine, comparative biology, and the emerging science of longevity.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== OUR STORY ===== -->
+    <section class="our-story section" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="our-story__grid">
+          <div class="our-story__text animate-slide-left">
+            <p class="eyebrow">Our Story</p>
+            <h2 id="story-heading" class="heading-lg">Born from a Simple Question</h2>
+            <p>
+              Why do some animals live far longer than expected — and what can we learn from them? This question drew together a group of veterinarians, biologists, and data scientists united by a shared conviction: that the science of aging in animals had been overlooked for too long.
+            </p>
+            <p>
+              The Veterinary Longevity Project was founded to change that. We built a platform that connects practicing veterinarians directly with cutting-edge aging research, creating a feedback loop between the clinic and the laboratory that benefits animals and humans alike.
+            </p>
+            <p>
+              Today, our network spans hundreds of clinics, dozens of research institutions, and thousands of enrolled animal patients — all contributing to the most comprehensive longitudinal study of animal aging ever undertaken.
+            </p>
+          </div>
+
+          <div class="animate-on-scroll delay-2">
+            <div class="visual-placeholder" role="img" aria-label="Abstract molecular structure illustration">
+              <svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Outer hexagons -->
+                <polygon points="130,15 195,52.5 195,127.5 130,165 65,127.5 65,52.5" fill="none" stroke="rgba(20,184,166,0.2)" stroke-width="1"/>
+                <polygon points="130,40 170,62.5 170,107.5 130,130 90,107.5 90,62.5" fill="none" stroke="rgba(20,184,166,0.35)" stroke-width="1"/>
+                <!-- DNA strands -->
+                <path d="M80 80 C95 90 115 100 130 110 C145 120 165 130 180 140" stroke="rgba(20,184,166,0.7)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <path d="M80 100 C95 90 115 80 130 70 C145 60 165 50 180 40" stroke="rgba(34,211,238,0.6)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <!-- Cross rungs -->
+                <line x1="90" y1="93" x2="90" y2="107" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
+                <line x1="105" y1="85" x2="105" y2="95" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
+                <line x1="120" y1="80" x2="120" y2="90" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
+                <line x1="140" y1="75" x2="140" y2="85" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
+                <line x1="155" y1="72" x2="155" y2="82" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
+                <line x1="170" y1="68" x2="170" y2="78" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
+                <!-- Nodes -->
+                <circle cx="130" cy="90" r="3" fill="rgba(20,184,166,0.8)"/>
+                <circle cx="100" cy="100" r="2.5" fill="rgba(34,211,238,0.6)"/>
+                <circle cx="160" cy="80" r="2.5" fill="rgba(34,211,238,0.6)"/>
+                <!-- Lower section -->
+                <path d="M80 160 C95 170 115 180 130 190 C145 200 165 210 180 220" stroke="rgba(20,184,166,0.5)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <path d="M80 180 C95 170 115 160 130 150 C145 140 165 130 180 120" stroke="rgba(34,211,238,0.45)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <circle cx="130" cy="170" r="3" fill="rgba(20,184,166,0.7)"/>
+                <!-- Radial dots -->
+                <circle cx="130" cy="30" r="3" fill="rgba(20,184,166,0.5)"/>
+                <circle cx="195" cy="70" r="2.5" fill="rgba(20,184,166,0.4)"/>
+                <circle cx="195" cy="130" r="2.5" fill="rgba(34,211,238,0.4)"/>
+                <circle cx="130" cy="175" r="3" fill="rgba(20,184,166,0.5)"/>
+                <circle cx="65" cy="130" r="2.5" fill="rgba(34,211,238,0.4)"/>
+                <circle cx="65" cy="70" r="2.5" fill="rgba(20,184,166,0.4)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MISSION & VISION ===== -->
+    <section class="mission-vision section" aria-label="Mission and Vision">
+      <div class="container">
+        <header class="section-header animate-on-scroll">
+          <p class="eyebrow">Purpose</p>
+          <h2 class="heading-lg">Mission &amp; Vision</h2>
+        </header>
+        <div class="grid-2">
+          <div class="card mission-card animate-scale delay-1">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <p class="eyebrow">Our Mission</p>
+            <h3 class="card__title">Advancing Longevity Science</h3>
+            <p class="card__text">To generate, translate, and disseminate the science of animal aging — connecting researchers with clinicians to accelerate discoveries that extend the healthy lifespan of animals everywhere.</p>
+          </div>
+
+          <div class="card vision-card animate-scale delay-2">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>
+              </svg>
+            </div>
+            <p class="eyebrow">Our Vision</p>
+            <h3 class="card__title">A World Where Age Is Just a Number</h3>
+            <p class="card__text">We envision a future where every animal — regardless of species or breed — has the opportunity to live a full, healthy life, supported by evidence-based veterinary care and ongoing scientific discovery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESEARCH AREAS ACCORDION ===== -->
+    <section class="research-deep section" aria-labelledby="areas-heading">
+      <div class="container--narrow">
+        <header class="section-header animate-on-scroll" style="max-width:none; text-align:left; margin-bottom: var(--space-8);">
+          <p class="eyebrow">Deep Dive</p>
+          <h2 id="areas-heading" class="heading-lg">Research Areas</h2>
+          <p class="section-header__sub" style="text-align:left; margin-top:var(--space-4);">
+            Our work spans four interconnected disciplines, each informing and strengthening the others.
+          </p>
+        </header>
+
+        <div class="accordion animate-on-scroll delay-1">
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="acc-1">
+              <span>Aging &amp; Longevity Science</span>
+              <svg class="accordion__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="accordion__content" id="acc-1" role="region">
+              <p class="accordion__body">
+                We study the fundamental biology of aging at the molecular, cellular, and organismal level. Our research explores epigenetic clocks in dogs and cats, comparative genomics across long-lived species, senescent cell dynamics, and the role of inflammation in age-related decline. This work provides the foundational science that all other research areas build upon.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="acc-2">
+              <span>Clinical Veterinary Support</span>
+              <svg class="accordion__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="accordion__content" id="acc-2" role="region">
+              <p class="accordion__body">
+                Translating research into clinical practice is a core mission. We develop evidence-based longevity assessment tools, continuing education programs for veterinarians, standardized health screening protocols for senior animals, and practice management resources that help clinics build robust preventive medicine programs focused on extending healthspan.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="acc-3">
+              <span>Disease Biomarkers &amp; Diagnostics</span>
+              <svg class="accordion__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="accordion__content" id="acc-3" role="region">
+              <p class="accordion__body">
+                Early detection changes outcomes. We partner with diagnostic labs and biotech companies to validate circulating biomarkers for cancer, kidney disease, cognitive dysfunction, and cardiovascular aging in animals. Our enrolled clinic network allows rapid clinical validation of novel diagnostic tests at a scale previously impossible in veterinary medicine.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="acc-4">
+              <span>Population Health &amp; Data Science</span>
+              <svg class="accordion__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="accordion__content" id="acc-4" role="region">
+              <p class="accordion__body">
+                Our enrolled clinics contribute anonymized health records, creating one of the largest longitudinal datasets on companion animal aging in the world. We apply machine learning, survival analysis, and causal inference methods to understand what environmental, genetic, and behavioral factors most strongly predict healthy aging — and communicate these findings directly back to clinic partners.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEAM ===== -->
+    <section class="team section" aria-labelledby="team-heading">
+      <div class="container">
+        <header class="section-header animate-on-scroll">
+          <p class="eyebrow">The People</p>
+          <h2 id="team-heading" class="heading-lg">Our Team</h2>
+          <p class="section-header__sub">Scientists, veterinarians, and data experts united by a passion for animal health and longevity.</p>
+        </header>
+
+        <div class="team-grid">
+          <div class="card team-card animate-scale delay-1">
+            <div class="team-card__avatar" aria-hidden="true">EL</div>
+            <h3 class="team-card__name">Dr. Elena Larsson</h3>
+            <p class="team-card__role">Principal Investigator</p>
+            <p class="team-card__bio">Specialist in comparative gerontology with 18 years studying aging across mammalian species. Former faculty at UC Davis School of Veterinary Medicine.</p>
+          </div>
+
+          <div class="card team-card animate-scale delay-2">
+            <div class="team-card__avatar" aria-hidden="true">MK</div>
+            <h3 class="team-card__name">Dr. Marcus Kim</h3>
+            <p class="team-card__role">Director of Clinical Programs</p>
+            <p class="team-card__bio">Practicing veterinarian and researcher focused on translating longevity science into actionable clinical protocols for companion animal practices.</p>
+          </div>
+
+          <div class="card team-card animate-scale delay-3">
+            <div class="team-card__avatar" aria-hidden="true">SP</div>
+            <h3 class="team-card__name">Dr. Sophia Patel</h3>
+            <p class="team-card__role">Head of Biomarker Research</p>
+            <p class="team-card__bio">Molecular biologist specializing in epigenetic aging clocks and circulating biomarkers of age-related disease in dogs and cats.</p>
+          </div>
+
+          <div class="card team-card animate-scale delay-4">
+            <div class="team-card__avatar" aria-hidden="true">JR</div>
+            <h3 class="team-card__name">James Rivera, PhD</h3>
+            <p class="team-card__role">Lead Data Scientist</p>
+            <p class="team-card__bio">Statistical geneticist applying machine learning and causal inference to the largest longitudinal companion animal health dataset ever assembled.</p>
+          </div>
+
+          <div class="card team-card animate-scale delay-1">
+            <div class="team-card__avatar" aria-hidden="true">AW</div>
+            <h3 class="team-card__name">Dr. Aisha Wolfe</h3>
+            <p class="team-card__role">Veterinary Partnerships Lead</p>
+            <p class="team-card__bio">Builds and supports our global network of enrolled clinics, ensuring participating veterinarians have the tools and support they need to contribute meaningfully.</p>
+          </div>
+
+          <div class="card team-card animate-scale delay-2">
+            <div class="team-card__avatar" aria-hidden="true">TC</div>
+            <h3 class="team-card__name">Thomas Chen</h3>
+            <p class="team-card__role">Research Coordinator</p>
+            <p class="team-card__bio">Coordinates multi-site research protocols, regulatory compliance, and data quality across the enrolled clinic network and institutional research partners.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="footer__logo" aria-label="Veterinary Longevity Project">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" fill="none" stroke="#14b8a6" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M11 11.5 C12.5 13 14.5 15 16 16 C17.5 17 19.5 19 21 20.5" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              <path d="M21 11.5 C19.5 13 17.5 15 16 16 C14.5 17 12.5 19 11 20.5" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              <circle cx="16" cy="16" r="1.5" fill="#14b8a6"/>
+            </svg>
+            Vet Longevity
+          </a>
+          <p class="footer__tagline">Advancing the science of animal aging — for every species, every stage of life.</p>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Navigation</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Contact</h3>
+          <a href="mailto:info@vetlongevity.org" class="footer__email">info@vetlongevity.org</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 Veterinary Longevity Project. All rights reserved.</span>
+        <span class="footer__tagline-short">Advancing science. Extending life.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

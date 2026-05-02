@@ -1,0 +1,38 @@
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Custom 404 fallback
+ErrorDocument 404 /index.html
+
+# Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json text/plain text/xml
+</IfModule>
+
+# Cache-Control headers
+<IfModule mod_headers.c>
+  # Cache CSS and JS for 1 year (they have no version query strings — re-upload to bust)
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+
+  # Cache HTML for 1 week
+  <FilesMatch "\.html$">
+    Header set Cache-Control "max-age=604800, public, must-revalidate"
+  </FilesMatch>
+
+  # Security headers
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Serve correct MIME types
+AddType text/css .css
+AddType application/javascript .js
+AddType image/svg+xml .svg
+
+# Disable directory listing
+Options -Indexes
