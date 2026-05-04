@@ -253,16 +253,18 @@ input, textarea, select { font-family: inherit; }
   top: 0; left: 0; right: 0;
   z-index: 1000;
   height: var(--nav-height);
-  background: transparent;
-  transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
-  border-bottom: 1px solid transparent;
+  background: #ffffff;
+  transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .nav.scrolled {
-  background: rgba(4, 13, 26, 0.88);
+  background: rgba(255, 255, 255, 0.96);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: var(--border-subtle);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .nav__inner {
@@ -279,7 +281,7 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-family-heading);
   font-size: var(--text-lg);
   font-weight: var(--font-weight-bold);
-  color: var(--color-white);
+  color: #0a1628;
   transition: opacity 0.2s ease;
   flex-shrink: 0;
 }
@@ -308,7 +310,7 @@ input, textarea, select { font-family: inherit; }
   font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.04em;
-  color: var(--color-gray-300);
+  color: #475569;
   transition: color 0.2s ease;
   position: relative;
   padding-bottom: 2px;
@@ -325,7 +327,7 @@ input, textarea, select { font-family: inherit; }
   transition: transform 0.25s ease;
 }
 
-.nav__link:hover, .nav__link.active { color: var(--color-white); }
+.nav__link:hover, .nav__link.active { color: #0a1628; }
 .nav__link.active::after { transform: scaleX(1); }
 
 .nav__cta { margin-left: var(--space-4); }
@@ -341,12 +343,12 @@ input, textarea, select { font-family: inherit; }
   transition: background 0.2s ease;
 }
 
-.nav__hamburger:hover { background: rgba(255,255,255,0.06); }
+.nav__hamburger:hover { background: rgba(0,0,0,0.05); }
 
 .nav__hamburger span {
   display: block;
   width: 22px; height: 2px;
-  background: var(--color-gray-300);
+  background: #475569;
   border-radius: var(--radius-full);
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
