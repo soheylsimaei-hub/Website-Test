@@ -455,6 +455,28 @@ input, textarea, select { font-family: inherit; }
   padding-top: var(--nav-height);
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/dna-helix.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 110%;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 768px) {
+  .hero::after {
+    background-size: auto 70%;
+    background-position: right -40px center;
+    opacity: 0.12;
+  }
+}
+
 .hero__blobs {
   position: absolute;
   inset: 0;
