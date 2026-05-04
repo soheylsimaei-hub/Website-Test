@@ -30,8 +30,8 @@
   --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
 
   /* Typography */
-  --font-family-heading: 'Syne', sans-serif;
-  --font-family-body: 'Inter', sans-serif;
+  --font-family-heading: 'DM Sans', sans-serif;
+  --font-family-body: 'DM Sans', sans-serif;
 
   --text-xs:   0.75rem;
   --text-sm:   0.875rem;
