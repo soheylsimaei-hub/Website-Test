@@ -116,99 +116,85 @@
           </div>
 
           <div class="animate-on-scroll delay-2">
-            <div class="visual-placeholder" role="img" aria-label="DNA double helix entwined with growing leaves, symbolizing life and longevity">
-              <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <div class="visual-placeholder" role="img" aria-label="A dog and a cat with a DNA double helix between them, representing animal genetics and longevity research">
+              <svg width="360" height="320" viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs>
                   <linearGradient id="dnaA" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.95"/>
-                    <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.95"/>
+                    <stop offset="0%" stop-color="#22d3ee"/>
+                    <stop offset="100%" stop-color="#14b8a6"/>
                   </linearGradient>
                   <linearGradient id="dnaB" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.9"/>
-                    <stop offset="100%" stop-color="#0ea5a5" stop-opacity="0.9"/>
+                    <stop offset="0%" stop-color="#14b8a6"/>
+                    <stop offset="100%" stop-color="#0ea5a5"/>
                   </linearGradient>
-                  <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#34d399"/>
-                    <stop offset="100%" stop-color="#10b981"/>
-                  </linearGradient>
-                  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
                     <stop offset="0%" stop-color="rgba(20,184,166,0.18)"/>
                     <stop offset="100%" stop-color="rgba(20,184,166,0)"/>
                   </radialGradient>
                 </defs>
 
-                <circle cx="160" cy="160" r="150" fill="url(#glow)"/>
+                <ellipse cx="180" cy="160" rx="170" ry="140" fill="url(#halo)"/>
 
-                <!-- Outer ring -->
-                <circle cx="160" cy="160" r="140" fill="none" stroke="rgba(20,184,166,0.18)" stroke-width="1"/>
-                <circle cx="160" cy="160" r="120" fill="none" stroke="rgba(34,211,238,0.12)" stroke-width="1" stroke-dasharray="2 6"/>
+                <!-- Dog silhouette (left) -->
+                <g transform="translate(40 110)" fill="rgba(34,211,238,0.85)" stroke="rgba(34,211,238,0.95)" stroke-width="1" stroke-linejoin="round">
+                  <path d="M5,75 C 0,55 5,35 15,25 C 18,12 25,5 32,8 C 35,2 42,0 48,5 C 55,2 62,5 65,12 C 75,15 85,25 88,40 C 92,50 92,62 90,72 L 90,90 L 75,90 L 75,82 L 60,82 L 60,90 L 45,90 L 45,82 L 30,82 L 30,90 L 15,90 L 15,82 C 8,80 5,78 5,75 Z" />
+                  <!-- ear -->
+                  <path d="M22,18 L 18,5 L 32,12 Z" fill="rgba(20,184,166,0.95)"/>
+                  <!-- eye -->
+                  <circle cx="65" cy="40" r="2" fill="#0a1628"/>
+                  <!-- nose -->
+                  <circle cx="86" cy="45" r="2.5" fill="#0a1628"/>
+                </g>
 
-                <!-- DNA double helix (vertical, centered) -->
-                <g transform="translate(160 160)">
-                  <!-- Strand A: left-to-right wave -->
-                  <path d="M-40,-110 C 40,-80 -40,-50 40,-20 C -40,10 40,40 -40,70 C 40,100 -40,110 -40,110"
-                        stroke="url(#dnaA)" stroke-width="3" fill="none" stroke-linecap="round"/>
-                  <!-- Strand B: mirrored -->
-                  <path d="M40,-110 C -40,-80 40,-50 -40,-20 C 40,10 -40,40 40,70 C -40,100 40,110 40,110"
-                        stroke="url(#dnaB)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <!-- Cat silhouette (right) -->
+                <g transform="translate(232 115)" fill="rgba(34,211,238,0.78)" stroke="rgba(34,211,238,0.95)" stroke-width="1" stroke-linejoin="round">
+                  <path d="M5,75 L 0,30 L 18,42 C 25,25 40,18 50,18 C 60,18 75,25 82,42 L 100,30 L 95,75 L 88,82 L 75,82 L 75,75 L 60,75 L 60,82 L 45,82 L 45,75 L 30,75 L 30,82 L 12,82 Z" />
+                  <!-- ears (triangular) -->
+                  <polygon points="0,30 5,5 22,38" fill="rgba(20,184,166,0.95)"/>
+                  <polygon points="100,30 95,5 78,38" fill="rgba(20,184,166,0.95)"/>
+                  <!-- eyes -->
+                  <ellipse cx="35" cy="48" rx="2" ry="3" fill="#0a1628"/>
+                  <ellipse cx="65" cy="48" rx="2" ry="3" fill="#0a1628"/>
+                  <!-- nose -->
+                  <path d="M48,58 L 52,58 L 50,62 Z" fill="#0a1628"/>
+                </g>
 
-                  <!-- Rungs -->
-                  <g stroke="rgba(20,184,166,0.55)" stroke-width="1.5" stroke-linecap="round">
-                    <line x1="-32" y1="-95" x2="32" y2="-95"/>
-                    <line x1="-22" y1="-75" x2="22" y2="-75"/>
-                    <line x1="-12" y1="-55" x2="12" y2="-55"/>
-                    <line x1="-22" y1="-35" x2="22" y2="-35"/>
-                    <line x1="-32" y1="-15" x2="32" y2="-15"/>
-                    <line x1="-22" y1="5" x2="22" y2="5"/>
-                    <line x1="-12" y1="25" x2="12" y2="25"/>
-                    <line x1="-22" y1="45" x2="22" y2="45"/>
-                    <line x1="-32" y1="65" x2="32" y2="65"/>
-                    <line x1="-22" y1="85" x2="22" y2="85"/>
+                <!-- Central DNA double helix (vertical) -->
+                <g transform="translate(180 160)">
+                  <!-- Strand A -->
+                  <path d="M-30,-120 C 30,-90 -30,-60 30,-30 C -30,0 30,30 -30,60 C 30,90 -30,120 -30,120"
+                        stroke="url(#dnaA)" stroke-width="4" fill="none" stroke-linecap="round"/>
+                  <!-- Strand B -->
+                  <path d="M30,-120 C -30,-90 30,-60 -30,-30 C 30,0 -30,30 30,60 C -30,90 30,120 30,120"
+                        stroke="url(#dnaB)" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+                  <!-- Rungs (base pairs) -->
+                  <g stroke="rgba(20,184,166,0.6)" stroke-width="2" stroke-linecap="round">
+                    <line x1="-26" y1="-105" x2="26" y2="-105"/>
+                    <line x1="-18" y1="-85" x2="18" y2="-85"/>
+                    <line x1="-10" y1="-65" x2="10" y2="-65"/>
+                    <line x1="-18" y1="-45" x2="18" y2="-45"/>
+                    <line x1="-26" y1="-25" x2="26" y2="-25"/>
+                    <line x1="-18" y1="-5" x2="18" y2="-5"/>
+                    <line x1="-10" y1="15" x2="10" y2="15"/>
+                    <line x1="-18" y1="35" x2="18" y2="35"/>
+                    <line x1="-26" y1="55" x2="26" y2="55"/>
+                    <line x1="-18" y1="75" x2="18" y2="75"/>
+                    <line x1="-10" y1="95" x2="10" y2="95"/>
                   </g>
 
                   <!-- Base nodes -->
                   <g>
-                    <circle cx="-32" cy="-95" r="3" fill="#22d3ee"/>
-                    <circle cx="32" cy="-95" r="3" fill="#14b8a6"/>
-                    <circle cx="-32" cy="-15" r="3" fill="#22d3ee"/>
-                    <circle cx="32" cy="-15" r="3" fill="#14b8a6"/>
-                    <circle cx="-32" cy="65" r="3" fill="#22d3ee"/>
-                    <circle cx="32" cy="65" r="3" fill="#14b8a6"/>
+                    <circle cx="-26" cy="-105" r="4" fill="#22d3ee"/>
+                    <circle cx="26" cy="-105" r="4" fill="#14b8a6"/>
+                    <circle cx="-26" cy="-25" r="4" fill="#22d3ee"/>
+                    <circle cx="26" cy="-25" r="4" fill="#14b8a6"/>
+                    <circle cx="-26" cy="55" r="4" fill="#22d3ee"/>
+                    <circle cx="26" cy="55" r="4" fill="#14b8a6"/>
                   </g>
                 </g>
 
-                <!-- Leaves growing from the helix - top right -->
-                <g transform="translate(220 70)">
-                  <path d="M0,0 C 12,-8 28,-12 38,-2 C 32,12 14,18 0,12 Z" fill="url(#leafGrad)" opacity="0.9"/>
-                  <path d="M0,0 C -2,-6 -2,-14 4,-18" stroke="#10b981" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                </g>
-                <g transform="translate(238 105)">
-                  <path d="M0,0 C 8,-6 22,-8 30,0 C 24,10 10,12 0,8 Z" fill="url(#leafGrad)" opacity="0.75"/>
-                </g>
-
-                <!-- Vine connecting helix to leaves -->
-                <path d="M180 120 C 200 100 215 85 220 75" stroke="#10b981" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                <path d="M195 130 C 215 125 232 115 240 108" stroke="#10b981" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.7"/>
-
-                <!-- Leaf - bottom left -->
-                <g transform="translate(82 230) rotate(180)">
-                  <path d="M0,0 C 10,-7 26,-10 34,-1 C 28,11 12,15 0,10 Z" fill="url(#leafGrad)" opacity="0.85"/>
-                </g>
-                <path d="M120 200 C 105 215 95 225 88 230" stroke="#10b981" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-
-                <!-- Heartbeat pulse line -->
-                <path d="M40 180 L 70 180 L 80 165 L 90 200 L 100 175 L 110 180 L 130 180"
-                      stroke="rgba(34,211,238,0.7)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-                <!-- Floating molecules / cells -->
-                <circle cx="55" cy="80" r="4" fill="rgba(20,184,166,0.6)"/>
-                <circle cx="55" cy="80" r="9" fill="none" stroke="rgba(20,184,166,0.3)" stroke-width="1"/>
-                <circle cx="265" cy="245" r="3" fill="rgba(34,211,238,0.7)"/>
-                <circle cx="265" cy="245" r="7" fill="none" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
-                <circle cx="50" cy="245" r="2.5" fill="rgba(20,184,166,0.5)"/>
-                <circle cx="270" cy="80" r="2" fill="rgba(34,211,238,0.5)"/>
-
-                <!-- Tiny sparkles -->
+                <!-- Tiny sparkle accents -->
                 <g fill="rgba(34,211,238,0.7)">
                   <circle cx="100" cy="50" r="1.5"/>
                   <circle cx="240" cy="200" r="1.2"/>
