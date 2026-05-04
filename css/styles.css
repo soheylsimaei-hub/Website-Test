@@ -1165,6 +1165,21 @@ input, textarea, select { font-family: inherit; }
 
 .footer__email:hover { color: var(--color-teal-300); }
 
+.footer__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  letter-spacing: 0.01em;
+}
+
+.footer__location svg {
+  flex-shrink: 0;
+  color: var(--color-teal-400);
+}
+
 .footer__bottom {
   display: flex;
   flex-direction: column;
