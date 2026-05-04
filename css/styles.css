@@ -788,17 +788,26 @@ input, textarea, select { font-family: inherit; }
 }
 
 .our-story__text {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto;
+  max-width: 68ch;
 }
 
-.our-story__text .heading-lg { margin-top: var(--space-4); }
+.our-story__text .heading-lg {
+  margin-top: var(--space-4);
+  letter-spacing: -0.01em;
+}
 
 .our-story__text p {
   color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
-  margin-top: var(--space-5);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-top: var(--space-6);
+}
+
+.our-story__text p:first-of-type {
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  font-weight: 400;
 }
 
 .our-story__image {
