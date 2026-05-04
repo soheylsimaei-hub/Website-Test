@@ -773,6 +773,14 @@ input, textarea, select { font-family: inherit; }
   margin-top: var(--space-5);
 }
 
+.our-story__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
 .visual-placeholder {
   display: flex;
   align-items: center;
