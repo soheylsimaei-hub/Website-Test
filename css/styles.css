@@ -96,7 +96,7 @@
   --shadow-glow-teal:  0 0 40px rgba(13,148,136,0.4), 0 4px 20px rgba(13,148,136,0.2);
 
   /* Components */
-  --nav-height:   72px;
+  --nav-height:   108px;
   --border-subtle: 1px solid rgba(255,255,255,0.06);
   --border-teal:   1px solid rgba(13,148,136,0.3);
   --card-padding:  var(--space-8);

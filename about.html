@@ -55,7 +55,7 @@
   <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner container">
       <a href="index.html" class="nav__logo" aria-label="Veterinary Longevity home">
-        <img src="images/logo-white.png" alt="Veterinary Longevity logo" class="nav__logo-icon" width="72" height="72" />
+        <img src="images/logo-white.png" alt="Veterinary Longevity logo" class="nav__logo-icon" width="96" height="96" />
         <span>Veterinary Longevity</span>
       </a>
 
@@ -116,36 +116,105 @@
           </div>
 
           <div class="animate-on-scroll delay-2">
-            <div class="visual-placeholder" role="img" aria-label="Abstract molecular structure illustration">
-              <svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- Outer hexagons -->
-                <polygon points="130,15 195,52.5 195,127.5 130,165 65,127.5 65,52.5" fill="none" stroke="rgba(20,184,166,0.2)" stroke-width="1"/>
-                <polygon points="130,40 170,62.5 170,107.5 130,130 90,107.5 90,62.5" fill="none" stroke="rgba(20,184,166,0.35)" stroke-width="1"/>
-                <!-- DNA strands -->
-                <path d="M80 80 C95 90 115 100 130 110 C145 120 165 130 180 140" stroke="rgba(20,184,166,0.7)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                <path d="M80 100 C95 90 115 80 130 70 C145 60 165 50 180 40" stroke="rgba(34,211,238,0.6)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                <!-- Cross rungs -->
-                <line x1="90" y1="93" x2="90" y2="107" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
-                <line x1="105" y1="85" x2="105" y2="95" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
-                <line x1="120" y1="80" x2="120" y2="90" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
-                <line x1="140" y1="75" x2="140" y2="85" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
-                <line x1="155" y1="72" x2="155" y2="82" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
-                <line x1="170" y1="68" x2="170" y2="78" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
-                <!-- Nodes -->
-                <circle cx="130" cy="90" r="3" fill="rgba(20,184,166,0.8)"/>
-                <circle cx="100" cy="100" r="2.5" fill="rgba(34,211,238,0.6)"/>
-                <circle cx="160" cy="80" r="2.5" fill="rgba(34,211,238,0.6)"/>
-                <!-- Lower section -->
-                <path d="M80 160 C95 170 115 180 130 190 C145 200 165 210 180 220" stroke="rgba(20,184,166,0.5)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                <path d="M80 180 C95 170 115 160 130 150 C145 140 165 130 180 120" stroke="rgba(34,211,238,0.45)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                <circle cx="130" cy="170" r="3" fill="rgba(20,184,166,0.7)"/>
-                <!-- Radial dots -->
-                <circle cx="130" cy="30" r="3" fill="rgba(20,184,166,0.5)"/>
-                <circle cx="195" cy="70" r="2.5" fill="rgba(20,184,166,0.4)"/>
-                <circle cx="195" cy="130" r="2.5" fill="rgba(34,211,238,0.4)"/>
-                <circle cx="130" cy="175" r="3" fill="rgba(20,184,166,0.5)"/>
-                <circle cx="65" cy="130" r="2.5" fill="rgba(34,211,238,0.4)"/>
-                <circle cx="65" cy="70" r="2.5" fill="rgba(20,184,166,0.4)"/>
+            <div class="visual-placeholder" role="img" aria-label="DNA double helix entwined with growing leaves, symbolizing life and longevity">
+              <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="dnaA" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.95"/>
+                    <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.95"/>
+                  </linearGradient>
+                  <linearGradient id="dnaB" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#0ea5a5" stop-opacity="0.9"/>
+                  </linearGradient>
+                  <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#34d399"/>
+                    <stop offset="100%" stop-color="#10b981"/>
+                  </linearGradient>
+                  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="rgba(20,184,166,0.18)"/>
+                    <stop offset="100%" stop-color="rgba(20,184,166,0)"/>
+                  </radialGradient>
+                </defs>
+
+                <circle cx="160" cy="160" r="150" fill="url(#glow)"/>
+
+                <!-- Outer ring -->
+                <circle cx="160" cy="160" r="140" fill="none" stroke="rgba(20,184,166,0.18)" stroke-width="1"/>
+                <circle cx="160" cy="160" r="120" fill="none" stroke="rgba(34,211,238,0.12)" stroke-width="1" stroke-dasharray="2 6"/>
+
+                <!-- DNA double helix (vertical, centered) -->
+                <g transform="translate(160 160)">
+                  <!-- Strand A: left-to-right wave -->
+                  <path d="M-40,-110 C 40,-80 -40,-50 40,-20 C -40,10 40,40 -40,70 C 40,100 -40,110 -40,110"
+                        stroke="url(#dnaA)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <!-- Strand B: mirrored -->
+                  <path d="M40,-110 C -40,-80 40,-50 -40,-20 C 40,10 -40,40 40,70 C -40,100 40,110 40,110"
+                        stroke="url(#dnaB)" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+                  <!-- Rungs -->
+                  <g stroke="rgba(20,184,166,0.55)" stroke-width="1.5" stroke-linecap="round">
+                    <line x1="-32" y1="-95" x2="32" y2="-95"/>
+                    <line x1="-22" y1="-75" x2="22" y2="-75"/>
+                    <line x1="-12" y1="-55" x2="12" y2="-55"/>
+                    <line x1="-22" y1="-35" x2="22" y2="-35"/>
+                    <line x1="-32" y1="-15" x2="32" y2="-15"/>
+                    <line x1="-22" y1="5" x2="22" y2="5"/>
+                    <line x1="-12" y1="25" x2="12" y2="25"/>
+                    <line x1="-22" y1="45" x2="22" y2="45"/>
+                    <line x1="-32" y1="65" x2="32" y2="65"/>
+                    <line x1="-22" y1="85" x2="22" y2="85"/>
+                  </g>
+
+                  <!-- Base nodes -->
+                  <g>
+                    <circle cx="-32" cy="-95" r="3" fill="#22d3ee"/>
+                    <circle cx="32" cy="-95" r="3" fill="#14b8a6"/>
+                    <circle cx="-32" cy="-15" r="3" fill="#22d3ee"/>
+                    <circle cx="32" cy="-15" r="3" fill="#14b8a6"/>
+                    <circle cx="-32" cy="65" r="3" fill="#22d3ee"/>
+                    <circle cx="32" cy="65" r="3" fill="#14b8a6"/>
+                  </g>
+                </g>
+
+                <!-- Leaves growing from the helix - top right -->
+                <g transform="translate(220 70)">
+                  <path d="M0,0 C 12,-8 28,-12 38,-2 C 32,12 14,18 0,12 Z" fill="url(#leafGrad)" opacity="0.9"/>
+                  <path d="M0,0 C -2,-6 -2,-14 4,-18" stroke="#10b981" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                </g>
+                <g transform="translate(238 105)">
+                  <path d="M0,0 C 8,-6 22,-8 30,0 C 24,10 10,12 0,8 Z" fill="url(#leafGrad)" opacity="0.75"/>
+                </g>
+
+                <!-- Vine connecting helix to leaves -->
+                <path d="M180 120 C 200 100 215 85 220 75" stroke="#10b981" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                <path d="M195 130 C 215 125 232 115 240 108" stroke="#10b981" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+                <!-- Leaf - bottom left -->
+                <g transform="translate(82 230) rotate(180)">
+                  <path d="M0,0 C 10,-7 26,-10 34,-1 C 28,11 12,15 0,10 Z" fill="url(#leafGrad)" opacity="0.85"/>
+                </g>
+                <path d="M120 200 C 105 215 95 225 88 230" stroke="#10b981" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+                <!-- Heartbeat pulse line -->
+                <path d="M40 180 L 70 180 L 80 165 L 90 200 L 100 175 L 110 180 L 130 180"
+                      stroke="rgba(34,211,238,0.7)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <!-- Floating molecules / cells -->
+                <circle cx="55" cy="80" r="4" fill="rgba(20,184,166,0.6)"/>
+                <circle cx="55" cy="80" r="9" fill="none" stroke="rgba(20,184,166,0.3)" stroke-width="1"/>
+                <circle cx="265" cy="245" r="3" fill="rgba(34,211,238,0.7)"/>
+                <circle cx="265" cy="245" r="7" fill="none" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+                <circle cx="50" cy="245" r="2.5" fill="rgba(20,184,166,0.5)"/>
+                <circle cx="270" cy="80" r="2" fill="rgba(34,211,238,0.5)"/>
+
+                <!-- Tiny sparkles -->
+                <g fill="rgba(34,211,238,0.7)">
+                  <circle cx="100" cy="50" r="1.5"/>
+                  <circle cx="240" cy="200" r="1.2"/>
+                  <circle cx="80" cy="280" r="1.5"/>
+                  <circle cx="240" cy="280" r="1.2"/>
+                </g>
               </svg>
             </div>
           </div>
@@ -259,32 +328,6 @@
       </div>
     </section>
 
-    <!-- ===== FOUNDER / TEAM ===== -->
-    <section class="team section" aria-labelledby="team-heading">
-      <div class="container">
-        <header class="section-header animate-on-scroll">
-          <p class="eyebrow">The People</p>
-          <h2 id="team-heading" class="heading-lg">Founder</h2>
-          <p class="section-header__sub">Veterinary Longevity is in its earliest days. We are openly building the scientific and clinical team — and looking for collaborators who share the mission.</p>
-        </header>
-
-        <div class="team-grid team-grid--solo">
-          <div class="card team-card animate-scale delay-1">
-            <div class="team-card__avatar" aria-hidden="true">SS</div>
-            <h3 class="team-card__name">Dr. Soheyl Simaei</h3>
-            <p class="team-card__role">Founder</p>
-            <p class="team-card__bio">Founded Veterinary Longevity to bring rigorous longevity science into everyday veterinary practice — bridging research and the clinic for every species.</p>
-          </div>
-
-          <div class="card team-card team-card--cta animate-scale delay-2">
-            <h3 class="team-card__name">Join us</h3>
-            <p class="team-card__role">Researchers · Veterinarians · Data scientists</p>
-            <p class="team-card__bio">We are actively building a multidisciplinary team. If you study aging, practice medicine, or analyze health data — and want to help extend healthy life for animals — we'd love to hear from you.</p>
-            <a href="contact.html" class="btn btn--primary" style="margin-top: var(--space-4);">Get in touch</a>
-          </div>
-        </div>
-      </div>
-    </section>
 
   </main>
 
