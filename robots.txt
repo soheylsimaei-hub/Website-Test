@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soheylsimaei-hub.github.io/Website-Test/sitemap.xml

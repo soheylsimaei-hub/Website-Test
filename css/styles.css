@@ -859,6 +859,20 @@ input, textarea, select { font-family: inherit; }
 
 .team-card { text-align: center; }
 
+.team-grid--solo {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-card--cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .team-card__avatar {
   width: 80px; height: 80px;
   border-radius: 50%;
