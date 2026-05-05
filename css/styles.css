@@ -549,6 +549,17 @@ input, textarea, select { font-family: inherit; }
   margin-bottom: var(--space-10);
 }
 
+.hero__note {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  max-width: 52ch;
+  margin-bottom: var(--space-10);
+  padding-left: var(--space-4);
+  border-left: 2px solid rgba(13,148,136,0.35);
+  font-style: italic;
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -1147,6 +1158,35 @@ input, textarea, select { font-family: inherit; }
 .form-general-error.visible { display: block; }
 
 /* ============================================
+   15b. FOUNDER SECTION
+   ============================================ */
+.founder { background: var(--color-navy-800); }
+
+.founder__inner {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.founder__inner .heading-lg {
+  margin-bottom: var(--space-8);
+}
+
+.founder__bio {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-10);
+}
+
+.founder__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ============================================
    16. FOOTER
    ============================================ */
 .footer {
@@ -1240,6 +1280,31 @@ input, textarea, select { font-family: inherit; }
 }
 
 .footer__tagline-short { font-style: italic; }
+
+.footer__social {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  color: var(--color-gray-500);
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.footer__social-link:hover {
+  color: var(--color-teal-400);
+  border-color: rgba(13,148,136,0.3);
+  background: rgba(13,148,136,0.06);
+}
 
 /* ============================================
    17. SCROLL ANIMATION CLASSES
