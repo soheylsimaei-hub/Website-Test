@@ -3,11 +3,11 @@
    ============================================ */
 :root {
   /* Colors */
-  --color-navy-950: #040d1a;
-  --color-navy-900: #070f20;
-  --color-navy-800: #0b1630;
-  --color-navy-700: #0f1f45;
-  --color-navy-600: #152354;
+  --color-navy-950: #0a1628;
+  --color-navy-900: #0e1c3a;
+  --color-navy-800: #142447;
+  --color-navy-700: #1a2e5e;
+  --color-navy-600: #213572;
   --color-teal-500: #0d9488;
   --color-teal-400: #14b8a6;
   --color-teal-300: #5eead4;
@@ -24,7 +24,7 @@
   --color-text-muted: #64748b;
 
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #040d1a 0%, #0b1630 50%, #070f20 100%);
+  --gradient-hero: linear-gradient(135deg, #0a1628 0%, #152a55 50%, #0e1c3a 100%);
   --gradient-teal: linear-gradient(135deg, #0d9488, #22d3ee);
   --gradient-card: linear-gradient(135deg, rgba(15,31,69,0.8), rgba(7,15,32,0.9));
   --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
