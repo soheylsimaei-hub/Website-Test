@@ -1177,6 +1177,8 @@ input, textarea, select { font-family: inherit; }
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-10);
+  text-align: justify;
+  hyphens: auto;
 }
 
 .founder__actions {
