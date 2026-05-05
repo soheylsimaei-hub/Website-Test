@@ -816,6 +816,8 @@ input, textarea, select { font-family: inherit; }
   font-size: 1.0625rem;
   line-height: 1.75;
   margin-top: var(--space-6);
+  text-align: justify;
+  hyphens: auto;
 }
 
 .our-story__text p:first-of-type {
