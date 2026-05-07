@@ -745,8 +745,8 @@ input, textarea, select { font-family: inherit; }
 .card__text {
   flex: 1;
   color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
-  font-size: var(--text-sm);
+  line-height: 1.65;
+  font-size: 0.9rem;
   margin-top: var(--space-5);
   padding-top: var(--space-5);
   border-top: var(--border-subtle);
