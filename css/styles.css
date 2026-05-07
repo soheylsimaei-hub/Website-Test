@@ -492,34 +492,24 @@ input, textarea, select { font-family: inherit; }
   z-index: 0;
 }
 
-/* DNA helix is now a real element (.hero__dna) so it can be animated */
-
-.hero__dna {
+.hero::after {
+  content: '';
   position: absolute;
-  right: -8%;
-  top: 50%;
-  height: 110%;
-  width: auto;
-  transform: perspective(700px) translateY(-50%) rotateY(0deg);
-  transform-origin: center center;
+  inset: 0;
+  background-image: url('../images/dna-helix.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 110%;
   opacity: 0.18;
-  mix-blend-mode: screen;
   pointer-events: none;
-  user-select: none;
   z-index: 0;
-  will-change: transform;
-  animation: dnaSpin 18s linear infinite;
-}
-
-@keyframes dnaSpin {
-  from { transform: perspective(700px) translateY(-50%) rotateY(0deg); }
-  to   { transform: perspective(700px) translateY(-50%) rotateY(360deg); }
+  mix-blend-mode: screen;
 }
 
 @media (max-width: 768px) {
-  .hero__dna {
-    height: 70%;
-    right: -40px;
+  .hero::after {
+    background-size: auto 70%;
+    background-position: right -40px center;
     opacity: 0.12;
   }
 }
@@ -1451,7 +1441,6 @@ input, textarea, select { font-family: inherit; }
   }
   .blob { animation: none; }
   .hero__scroll-hint { animation: none; }
-  .hero__dna { animation: none; }
 }
 
 /* ============================================
