@@ -500,7 +500,7 @@ input, textarea, select { font-family: inherit; }
   top: 50%;
   height: 110%;
   width: auto;
-  transform: translateY(-50%) rotate(0deg);
+  transform: perspective(700px) translateY(-50%) rotateY(0deg);
   transform-origin: center center;
   opacity: 0.18;
   mix-blend-mode: screen;
@@ -508,12 +508,12 @@ input, textarea, select { font-family: inherit; }
   user-select: none;
   z-index: 0;
   will-change: transform;
-  animation: dnaSpin 90s linear infinite;
+  animation: dnaSpin 10s linear infinite;
 }
 
 @keyframes dnaSpin {
-  from { transform: translateY(-50%) rotate(0deg); }
-  to   { transform: translateY(-50%) rotate(360deg); }
+  from { transform: perspective(700px) translateY(-50%) rotateY(0deg); }
+  to   { transform: perspective(700px) translateY(-50%) rotateY(360deg); }
 }
 
 @media (max-width: 768px) {
