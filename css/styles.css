@@ -1545,7 +1545,16 @@ body.menu-open {
 
 .footer__link:hover { color: var(--color-white); }
 
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
 .footer__email {
+  display: inline-flex;
+  align-items: center;
   font-size: var(--text-sm);
   color: var(--color-teal-400);
   transition: color 0.2s ease;
@@ -1557,7 +1566,6 @@ body.menu-open {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: var(--space-3);
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   letter-spacing: 0.01em;
