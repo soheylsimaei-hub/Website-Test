@@ -750,8 +750,7 @@ input, textarea, select { font-family: inherit; }
   margin-top: var(--space-5);
   padding-top: var(--space-5);
   border-top: var(--border-subtle);
-  text-align: justify;
-  text-align-last: left;
+  text-align: left;
 }
 
 /* ============================================
@@ -1157,8 +1156,7 @@ input, textarea, select { font-family: inherit; }
   color: var(--color-text-secondary);
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
-  text-align: justify;
-  text-align-last: left;
+  text-align: left;
 }
 
 .contact-info__expects-list li::before {
