@@ -255,7 +255,7 @@ input, textarea, select { font-family: inherit; }
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 1000;
+  z-index: 9999;
   height: var(--nav-height);
   background: var(--color-navy-950);
   transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
@@ -365,16 +365,19 @@ input, textarea, select { font-family: inherit; }
 .nav__mobile {
   display: none;
   position: fixed;
-  top: var(--nav-height); left: 0; right: 0; bottom: 0;
-  z-index: 999;
-  background: rgb(12, 25, 50);
+  inset: 0;                        /* full viewport — no gaps on any browser */
+  z-index: 9998;                   /* below nav (9999), above everything else */
+  background: #0c1932;             /* hard-coded dark navy — never a variable */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: var(--space-10);
+  padding-top: var(--nav-height);  /* push links below the visible nav bar */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
@@ -1511,8 +1514,8 @@ input, textarea, select { font-family: inherit; }
   .nav__link  { color: rgba(12,25,50,0.55); }
   .nav__link:hover, .nav__link.active { color: #0c1932; }
   .nav__hamburger span { background: rgba(12,25,50,0.55); }
-  .nav__mobile { background: rgb(255,255,255); }
-  .nav__mobile-link { color: #0c1932; }
+  /* mobile menu stays dark (#0c1932) in all colour schemes — intentional */
+  .nav__mobile-link { color: var(--color-teal-300); }
 
   /* --- Hero & Page Hero stay dark — hardcoded gradient, no bg override --- */
   /* Keep all text inside hero sections light so they read on dark background */
