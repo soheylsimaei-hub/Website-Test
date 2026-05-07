@@ -450,6 +450,20 @@ input, textarea, select { font-family: inherit; }
 
 .btn--lg { height: 56px; padding: 0 var(--space-10); font-size: var(--text-base); }
 
+/* Ghost button on dark hero/page-hero backgrounds — needs stronger presence */
+.hero .btn--ghost,
+.page-hero .btn--ghost {
+  color: rgba(232,212,168,0.92);
+  border: 1px solid rgba(201,169,111,0.65);
+}
+
+.hero .btn--ghost:hover,
+.page-hero .btn--ghost:hover {
+  background: rgba(201,169,111,0.14);
+  border-color: rgba(201,169,111,0.9);
+  color: #f2e8cc;
+}
+
 .btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
 
 /* ============================================
