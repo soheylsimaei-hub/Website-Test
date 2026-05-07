@@ -438,12 +438,13 @@ input, textarea, select { font-family: inherit; }
 
 .btn--ghost {
   background: transparent;
-  color: var(--color-teal-400);
-  border: var(--border-teal);
+  color: var(--color-teal-300);
+  border: 1px solid rgba(201,169,111,0.42);
 }
 
 .btn--ghost:hover {
   background: rgba(201,169,111,0.1);
+  border-color: rgba(201,169,111,0.65);
   transform: translateY(-2px);
 }
 
@@ -730,11 +731,11 @@ input, textarea, select { font-family: inherit; }
   content: '\201C';
   position: absolute;
   top: -0.15em; left: -0.05em;
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-display);
   font-size: 20rem;
-  font-weight: var(--font-weight-extrabold);
+  font-weight: 300;
   color: var(--color-teal-500);
-  opacity: 0.04;
+  opacity: 0.06;
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -743,14 +744,15 @@ input, textarea, select { font-family: inherit; }
 .editorial .container--narrow { text-align: center; }
 
 .editorial__quote {
-  font-family: var(--font-family-heading);
-  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+  font-family: var(--font-family-display);
+  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
   font-style: italic;
-  font-weight: var(--font-weight-medium);
+  font-weight: 300;
   line-height: var(--leading-snug);
   color: var(--color-white);
   max-width: 820px;
-  margin: 0 auto var(--space-6);
+  margin: 0 auto var(--space-8);
+  letter-spacing: 0.01em;
 }
 
 .editorial__attribution {
@@ -1235,13 +1237,13 @@ input, textarea, select { font-family: inherit; }
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-4);
-  background: rgba(201,169,111,0.08);
-  border: 1px solid rgba(201,169,111,0.22);
+  background: rgba(201,169,111,0.07);
+  border: 1px solid rgba(201,169,111,0.32);
   border-radius: var(--radius-full);
   font-size: var(--text-xs);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.04em;
-  color: var(--color-teal-300);
+  color: var(--color-teal-200);
   white-space: nowrap;
 }
 
@@ -1450,6 +1452,36 @@ input, textarea, select { font-family: inherit; }
 
   body { color: var(--color-text-primary); }
 
+  /* --- Eyebrow labels (gold becomes illegible on warm beige) --- */
+  /* Hero and page-hero eyebrows are re-overridden below (dark background) */
+  .eyebrow { color: rgba(12,25,50,0.55); }
+
+  /* --- Buttons --- */
+  /* Primary: var(--color-navy-950) maps to warm beige in light mode → invisible text */
+  .btn--primary { color: #0c1932; }
+
+  /* Ghost: gold on warm beige → too low contrast */
+  .btn--ghost {
+    color: rgba(12,25,50,0.75);
+    border-color: rgba(12,25,50,0.25);
+  }
+  .btn--ghost:hover {
+    background: rgba(12,25,50,0.06);
+    color: #0c1932;
+    border-color: rgba(12,25,50,0.42);
+  }
+
+  /* --- Founder credential pills (champagne text on warm beige = invisible) --- */
+  .founder__credential {
+    background: rgba(12,25,50,0.04);
+    border-color: rgba(12,25,50,0.18);
+    color: rgba(12,25,50,0.68);
+  }
+  .founder__credential svg { opacity: 0.5; }
+
+  /* --- Editorial section must stay dark (white quote text would be on warm beige) --- */
+  .editorial { background: #111e38; }
+
   /* --- Navigation --- */
   .nav {
     background: #ffffff;
@@ -1535,6 +1567,13 @@ input, textarea, select { font-family: inherit; }
     box-shadow: 0 0 0 3px rgba(201,169,111,0.15);
   }
 
+  /* --- Small label text (expects-title on white card) --- */
+  .contact-info__expects-title { color: rgba(12,25,50,0.52); }
+
+  /* --- Nav primary CTA on white nav background --- */
+  .nav .btn--primary { color: #0c1932; }
+  /* Ghost CTA in nav — already covered by .btn--ghost above */
+
   /* --- Footer stays dark (elegant contrast) --- */
   .footer {
     background: #0c1932;
@@ -1580,5 +1619,5 @@ input, textarea, select { font-family: inherit; }
 
   .contact-split { grid-template-columns: 1fr 1.4fr; gap: var(--space-16); }
 
-  .our-story__grid { grid-template-columns: 1fr 1fr; }
+  .our-story__grid { grid-template-columns: 1.2fr 0.8fr; }
 }
