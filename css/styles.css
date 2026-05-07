@@ -1331,7 +1331,6 @@ input, textarea, select { font-family: inherit; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-teal-400);
-  opacity: 0.65;
   margin-bottom: var(--space-3);
 }
 
@@ -1348,18 +1347,40 @@ input, textarea, select { font-family: inherit; }
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-3) var(--space-5);
-  background: rgba(201,169,111,0.07);
-  border: 1px solid rgba(201,169,111,0.32);
   border-radius: var(--radius-lg);
   font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.02em;
-  color: var(--color-teal-200);
   white-space: nowrap;
 }
 
+/* Row 1: qualification + research field — gold */
+.founder__credential:nth-child(1),
+.founder__credential:nth-child(2) {
+  background: rgba(201,169,111,0.16);
+  border: 1px solid rgba(201,169,111,0.55);
+  color: var(--color-teal-200);
+}
+
+/* Row 2: clinical specialty + role — deep navy accent */
+.founder__credential:nth-child(3),
+.founder__credential:nth-child(4) {
+  background: rgba(23,41,82,0.35);
+  border: 1px solid rgba(201,169,111,0.28);
+  color: var(--color-teal-300);
+}
+
+/* Row 3: experience + location — champagne warm */
+.founder__credential:nth-child(5),
+.founder__credential:nth-child(6) {
+  background: rgba(232,212,168,0.12);
+  border: 1px solid rgba(201,169,111,0.42);
+  color: var(--color-teal-200);
+}
+
 .founder__credential svg {
-  opacity: 0.65;
+  color: var(--color-teal-400);
+  opacity: 0.9;
   flex-shrink: 0;
 }
 
@@ -1582,14 +1603,34 @@ input, textarea, select { font-family: inherit; }
     border-color: rgba(12,25,50,0.42);
   }
 
-  /* --- Founder credential pills (champagne text on warm beige = invisible) --- */
-  .founder__credentials-label { color: rgba(12,25,50,0.45); }
-  .founder__credential {
-    background: rgba(12,25,50,0.04);
-    border-color: rgba(12,25,50,0.18);
-    color: rgba(12,25,50,0.7);
+  /* --- Founder credential pills — light mode colour accents --- */
+  .founder__credentials-label { color: var(--color-teal-500); opacity: 0.9; }
+
+  /* Row 1: qualification + research — warm gold */
+  .founder__credential:nth-child(1),
+  .founder__credential:nth-child(2) {
+    background: rgba(201,169,111,0.14);
+    border-color: rgba(201,169,111,0.55);
+    color: #5a3e10;
   }
-  .founder__credential svg { opacity: 0.45; }
+
+  /* Row 2: clinical specialty + role — navy */
+  .founder__credential:nth-child(3),
+  .founder__credential:nth-child(4) {
+    background: rgba(12,25,50,0.07);
+    border-color: rgba(12,25,50,0.28);
+    color: #0c1932;
+  }
+
+  /* Row 3: experience + location — champagne tint */
+  .founder__credential:nth-child(5),
+  .founder__credential:nth-child(6) {
+    background: rgba(201,169,111,0.1);
+    border-color: rgba(201,169,111,0.45);
+    color: #6b4c18;
+  }
+
+  .founder__credential svg { color: inherit; opacity: 0.7; }
 
   /* --- Editorial section must stay dark (white quote text would be on warm beige) --- */
   .editorial { background: #111e38; }
