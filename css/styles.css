@@ -1359,7 +1359,131 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ============================================
-   18. MEDIA QUERIES
+   18. LIGHT MODE (prefers-color-scheme: light)
+   ============================================ */
+@media (prefers-color-scheme: light) {
+
+  /* --- Variables --- */
+  :root {
+    --color-navy-950: #f5f3ef;
+    --color-navy-900: #ede9e2;
+    --color-navy-800: #e3ddd4;
+    --color-navy-700: #d5cec3;
+    --color-navy-600: #c4bcaf;
+
+    --color-text-primary:   #0c1932;
+    --color-text-secondary: #3d4f65;
+    --color-text-muted:     #7a8a9b;
+
+    --gradient-card:  linear-gradient(135deg, rgba(255,255,255,0.98), rgba(240,237,232,0.95));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4));
+    --border-subtle:  1px solid rgba(12,25,50,0.08);
+    --shadow-card:    0 4px 24px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+    --shadow-card-hover: 0 8px 40px rgba(201,169,111,0.22), 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  body { color: var(--color-text-primary); }
+
+  /* --- Navigation --- */
+  .nav {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(201,169,111,0.2);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  }
+  .nav.scrolled {
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid rgba(201,169,111,0.22);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
+  .nav__logo  { color: #0c1932; }
+  .nav__link  { color: rgba(12,25,50,0.55); }
+  .nav__link:hover, .nav__link.active { color: #0c1932; }
+  .nav__hamburger span { background: rgba(12,25,50,0.55); }
+  .nav__mobile { background: rgb(255,255,255); }
+  .nav__mobile-link { color: #0c1932; }
+
+  /* --- Hero & Page Hero stay dark — hardcoded gradient, no bg override --- */
+  /* Keep all text inside hero sections light so they read on dark background */
+  .hero .heading-display,
+  .page-hero .heading-display { color: var(--color-teal-300); }
+  .hero__sub,
+  .page-hero__sub { color: rgba(240,235,225,0.78); }
+  .hero__note { color: rgba(240,235,225,0.55); }
+  .hero .eyebrow,
+  .page-hero .eyebrow { color: var(--color-teal-400); }
+
+  /* --- Headings on light section backgrounds --- */
+  .heading-display { color: #0c1932; }
+  .heading-xl      { color: #0c1932; }
+  .heading-lg      { color: #0c1932; }
+  .heading-md      { color: #0c1932; }
+
+  /* --- Cards --- */
+  .card {
+    background: #ffffff;
+    border: 1px solid rgba(201,169,111,0.2);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  .card__title { color: #0c1932; }
+  .card__text  { color: var(--color-text-secondary); }
+
+  /* --- Accordion --- */
+  .accordion__item   { border-bottom-color: rgba(12,25,50,0.1); }
+  .accordion__trigger { color: #0c1932; }
+  .accordion__body   { color: var(--color-text-secondary); }
+
+  /* --- Our Story text --- */
+  .our-story__text p { color: var(--color-text-secondary); }
+  .our-story__text .heading-lg { color: #0c1932; }
+
+  /* --- Mission / Vision border --- */
+  .mission-card { border-left: 4px solid var(--color-teal-500); }
+
+  /* --- Founder bio --- */
+  .founder__bio { color: var(--color-text-secondary); }
+
+  /* --- Section sub-headings --- */
+  .section-header__sub { color: var(--color-text-secondary); }
+
+  /* --- Contact --- */
+  .contact-info__title { color: #0c1932; }
+  .contact-info__text  { color: var(--color-text-secondary); }
+  .contact-info__expects-list li { color: var(--color-text-secondary); }
+
+  /* --- Form inputs --- */
+  .form-label { color: #0c1932; }
+  .form-input,
+  .form-textarea {
+    background: #ffffff;
+    border: 1px solid rgba(12,25,50,0.15);
+    color: #0c1932;
+  }
+  .form-input::placeholder,
+  .form-textarea::placeholder { color: rgba(12,25,50,0.35); }
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: var(--color-teal-500);
+    box-shadow: 0 0 0 3px rgba(201,169,111,0.15);
+  }
+
+  /* --- Footer stays dark (elegant contrast) --- */
+  .footer {
+    background: #0c1932;
+    border-top: 1px solid rgba(201,169,111,0.15);
+  }
+  .footer__logo    { color: #ffffff; }
+  .footer__tagline { color: rgba(240,235,225,0.55); }
+  .footer__heading { color: var(--color-teal-400); }
+  .footer__link    { color: rgba(240,235,225,0.5); }
+  .footer__link:hover { color: #ffffff; }
+  .footer__email   { color: var(--color-teal-400); }
+  .footer__location { color: rgba(240,235,225,0.5); }
+  .footer__bottom  { color: rgba(240,235,225,0.35); border-top-color: rgba(255,255,255,0.06); }
+  .footer__social-link { color: rgba(240,235,225,0.4); border-color: rgba(255,255,255,0.07); }
+}
+
+/* ============================================
+   19. MEDIA QUERIES
    ============================================ */
 
 /* Mobile nav */
