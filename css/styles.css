@@ -699,6 +699,8 @@ input, textarea, select { font-family: inherit; }
   border-radius: var(--radius-xl);
   padding: var(--card-padding);
   box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               border-color 0.5s ease;
@@ -727,14 +729,22 @@ input, textarea, select { font-family: inherit; }
   font-size: var(--text-xl);
   font-weight: var(--font-weight-semibold);
   color: var(--color-white);
-  margin-bottom: var(--space-3);
+  /* normalise to 2-line height so body text aligns across all cards */
+  min-height: calc(2 * var(--text-xl) * 1.3);
+  margin-bottom: 0;
   line-height: var(--leading-snug);
+  display: flex;
+  align-items: flex-start;
 }
 
 .card__text {
+  flex: 1;
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
   font-size: var(--text-sm);
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: var(--border-subtle);
 }
 
 /* ============================================
