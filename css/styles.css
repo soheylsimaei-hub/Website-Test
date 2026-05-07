@@ -236,6 +236,8 @@ input, textarea, select { font-family: inherit; }
   font-size: var(--text-lg);
   line-height: 1.78;
   margin-top: var(--space-6);
+  text-align: justify;
+  text-align-last: left;
 }
 
 .grid-2 {
@@ -587,6 +589,8 @@ input, textarea, select { font-family: inherit; }
   line-height: 1.82;
   max-width: 52ch;
   margin-bottom: var(--space-12);
+  text-align: justify;
+  text-align-last: left;
 }
 
 .hero__note {
@@ -597,6 +601,8 @@ input, textarea, select { font-family: inherit; }
   margin-bottom: var(--space-12);
   padding-left: var(--space-5);
   border-left: 3px solid rgba(201,169,111,0.42);
+  text-align: justify;
+  text-align-last: left;
   font-style: italic;
 }
 
@@ -876,6 +882,8 @@ input, textarea, select { font-family: inherit; }
   line-height: 1.8;
   max-width: 52ch;
   margin-top: var(--space-6);
+  text-align: justify;
+  text-align-last: left;
 }
 
 /* ============================================
@@ -909,7 +917,8 @@ input, textarea, select { font-family: inherit; }
   font-size: 1.0625rem;
   line-height: 1.75;
   margin-top: var(--space-6);
-  text-align: left;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .our-story__text p:first-of-type {
@@ -1001,6 +1010,8 @@ input, textarea, select { font-family: inherit; }
   color: var(--color-text-secondary);
   line-height: 1.82;
   font-size: 1.0125rem;
+  text-align: justify;
+  text-align-last: left;
 }
 
 /* Team */
@@ -1097,6 +1108,8 @@ input, textarea, select { font-family: inherit; }
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-8);
+  text-align: justify;
+  text-align-last: left;
 }
 
 .contact-info__email-pill {
@@ -1303,7 +1316,8 @@ input, textarea, select { font-family: inherit; }
   line-height: 1.85;
   margin-top: var(--space-8);
   margin-bottom: var(--space-12);
-  text-align: left;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .founder__bio p + p {
