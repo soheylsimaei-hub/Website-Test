@@ -957,10 +957,88 @@ input, textarea, select { font-family: inherit; }
 
 .visual-placeholder svg { position: relative; z-index: 1; }
 
-.mission-vision { background: var(--color-navy-800); }
+.mission-vision {
+  background: var(--color-navy-800);
+  position: relative;
+  overflow: hidden;
+}
 
-.mission-card { border-left: 4px solid var(--color-teal-500); }
-.vision-card  { border-left: 4px solid var(--color-cyan-400); }
+/* Subtle warm atmospheric glow */
+.mission-vision::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 25% 60%, rgba(201,169,111,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Override heading to display serif for philosophical weight */
+.mv-section-title {
+  font-family: var(--font-family-display);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--color-teal-300);
+}
+
+/* Editorial split — subtle asymmetry: vision panel slightly wider */
+.mv-split {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  align-items: start;
+  border-top: 1px solid rgba(201,169,111,0.22);
+  margin-top: var(--space-14);
+  position: relative;
+  z-index: 1;
+}
+
+/* Vertical divider between panels */
+.mv-split::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: calc(100% / 2.08);
+  width: 1px;
+  background: rgba(201,169,111,0.1);
+  pointer-events: none;
+}
+
+.mv-panel {
+  padding: clamp(var(--space-10), 4vw, var(--space-14)) clamp(var(--space-8), 3vw, var(--space-12));
+}
+
+/* Quiet icon — just a stroke mark, no background container */
+.mv-icon {
+  display: block;
+  color: var(--color-teal-400);
+  opacity: 0.5;
+  margin-bottom: var(--space-7);
+}
+
+.mv-label {
+  margin-bottom: var(--space-4);
+  opacity: 0.7;
+}
+
+/* Cormorant Garamond for the statement headings */
+.mv-heading {
+  font-family: var(--font-family-display);
+  font-size: clamp(1.75rem, 2.2vw + 0.5rem, 2.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--color-white);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.mv-body {
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  font-size: var(--text-base);
+  text-align: justify;
+  text-align-last: left;
+  max-width: 52ch;
+}
 
 /* Research Deep */
 .research-deep { background: var(--color-navy-950); }
@@ -1695,8 +1773,13 @@ input, textarea, select { font-family: inherit; }
   .our-story__text p { color: var(--color-text-secondary); }
   .our-story__text .heading-lg { color: #0c1932; }
 
-  /* --- Mission / Vision border --- */
-  .mission-card { border-left: 4px solid var(--color-teal-500); }
+  /* --- Scientific Direction panels --- */
+  .mv-section-title { color: #0c1932; }
+  .mv-split { border-top-color: rgba(12,25,50,0.12); }
+  .mv-split::after { background: rgba(12,25,50,0.07); }
+  .mv-heading { color: #0c1932; }
+  .mv-body { color: var(--color-text-secondary); }
+  .mv-icon { color: var(--color-teal-500); opacity: 0.55; }
 
   /* --- Founder bio box --- */
   .founder__inner {
