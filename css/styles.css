@@ -1070,7 +1070,7 @@ input, textarea, select { font-family: inherit; }
 .contact-info__email-pill svg { color: var(--color-teal-400); flex-shrink: 0; }
 
 .contact-info__email-pill a {
-  color: var(--color-teal-400);
+  color: var(--color-text-primary);
   font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
   transition: color 0.2s ease;
