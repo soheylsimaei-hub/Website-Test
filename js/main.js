@@ -19,24 +19,34 @@ function initNav() {
   const mobileMenu = document.getElementById('mobile-menu');
   let isOpen = false;
   let ticking = false;
+  let savedScrollY = 0;
 
   function openMenu() {
     isOpen = true;
+    savedScrollY = window.scrollY;
+    // iOS-safe body scroll lock: position:fixed + top offset preserves scroll position
+    document.body.style.top = `-${savedScrollY}px`;
+    document.body.classList.add('menu-open');
     nav.classList.add('nav--open');
+    mobileMenu.classList.add('menu--open');
     hamburger.setAttribute('aria-expanded', 'true');
     mobileMenu.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     isOpen = false;
+    // Restore scroll position before removing the body lock
+    document.body.classList.remove('menu-open');
+    document.body.style.top = '';
+    window.scrollTo(0, savedScrollY);
     nav.classList.remove('nav--open');
+    mobileMenu.classList.remove('menu--open');
     hamburger.setAttribute('aria-expanded', 'false');
     mobileMenu.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
   }
 
-  hamburger.addEventListener('click', () => {
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent the document click handler firing on the same event
     isOpen ? closeMenu() : openMenu();
   });
 
@@ -48,8 +58,9 @@ function initNav() {
     if (e.key === 'Escape' && isOpen) closeMenu();
   });
 
+  // Close when tapping outside both the nav bar and the menu overlay
   document.addEventListener('click', (e) => {
-    if (isOpen && !nav.contains(e.target)) closeMenu();
+    if (isOpen && !nav.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
   });
 
   window.addEventListener('scroll', () => {
