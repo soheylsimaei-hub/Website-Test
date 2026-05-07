@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initContactForm();
   initSmoothScroll();
+  initHeroParallax();
 });
 
 function initNav() {
@@ -267,4 +268,28 @@ function initSmoothScroll() {
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+}
+
+function initHeroParallax() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const content = hero.querySelector('.hero__content');
+  const trajectory = hero.querySelector('.hero__trajectory');
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        if (content) content.style.transform = `translateY(${scrollY * 0.04}px)`;
+        if (trajectory) trajectory.style.transform = `translateY(${scrollY * 0.07}px)`;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 }
