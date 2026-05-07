@@ -1884,6 +1884,55 @@ body.menu-open {
   .nav__mobile { display: flex; }
 }
 
+/* ============================================
+   VISION SECTION (Homepage)
+   ============================================ */
+.vision { background: var(--color-navy-800); }
+
+.vision__grid {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  gap: var(--space-6);
+}
+
+/* Primary card — warmer border to signal lead topic */
+.card--primary {
+  border-color: rgba(201,169,111,0.42);
+}
+
+/* Card link — sits at the bottom of card content */
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-6);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.03em;
+  color: var(--color-teal-400);
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.card__link:hover { color: var(--color-teal-300); gap: var(--space-3); }
+
+/* Pillar page "Why" section — slight tonal step */
+.pillar-why { background: var(--color-navy-900); }
+
+/* Vision grid collapses on small screens */
+@media (max-width: 640px) {
+  .vision__grid { grid-template-columns: 1fr; }
+}
+
+/* Light-mode overrides for new components */
+@media (prefers-color-scheme: light) {
+  .vision { background: #f0ece4; }
+  .card--primary { border-color: rgba(201,169,111,0.5); }
+  .card__link { color: var(--color-teal-500); }
+  .card__link:hover { color: #7a5c1e; }
+  .pillar-why { background: #e8e2d8; }
+}
+
 /* Stats strip: 3 columns on wider screens */
 @media (min-width: 640px) {
   .stats-strip__grid {
